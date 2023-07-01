@@ -13,6 +13,6 @@ use App\Http\Controllers\InicioController;
 |
 */
 
-Route::get('/',[InicioController::class,'login'])->name('login');
+Route::get('/login',[InicioController::class,'login'])->name('login');
 Route::get('/datos-cuenta',[InicioController::class,'datosCuenta'])->name('login.datosCuenta');
 Route::post('/crear-cuenta',[InicioController::class,'crearCuenta'])->name('login.crearCuenta');
