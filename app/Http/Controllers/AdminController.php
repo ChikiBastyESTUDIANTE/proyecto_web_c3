@@ -11,6 +11,6 @@ class AdminController extends Controller
 {
     public function listarPerfiles(){
         $perfiles = Perfil::all();
-        return view('Admin.listar_perfiles',compact('perfiles'));
+        return view('admin.listar_perfiles',compact('perfiles'));
     }
 }

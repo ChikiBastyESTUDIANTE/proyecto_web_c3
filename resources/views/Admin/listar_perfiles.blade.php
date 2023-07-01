@@ -1,5 +1,5 @@
-@extends('Publico.template')
-@section('Botones-nav')
+@extends('publico.template')
+@section('botones-nav')
     
 @endsection
 {{-- PROFE SI SE QUE FALTAN COLORES AQUI :C --}}

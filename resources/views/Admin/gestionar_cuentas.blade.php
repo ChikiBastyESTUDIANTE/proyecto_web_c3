@@ -1,1 +1,1 @@
-@extends('Publico.template')
+@extends('publico.template')

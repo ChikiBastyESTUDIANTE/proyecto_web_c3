@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg bg-secondary">
         <div class="container-fluid">
             <h4>Instagramn't</h4>
-            @yield('Botones-nav')
+            @yield('botones-nav')
         </div>
     </nav>
 
