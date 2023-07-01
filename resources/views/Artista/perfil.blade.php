@@ -38,13 +38,13 @@
                             <h5>Añadir foto</h5>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form action="" method="POST">
                                 <div class="mb-3">
-                                    <label for="foto" class="form-label">Elegir foto</label>
+                                    <label for="foto" name="archivo" class="form-label">Elegir foto</label>
                                     <input type="file" class="form-control" id="foto" aria-describedby="emailHelp"> 
                                 </div>
                                 <div class="mb-3">
-                                    <label for="descripcion" class="form-label">Descripcion</label>
+                                    <label for="descripcion" name="descripcion" class="form-label">Descripcion</label>
                                     <input type="text" class="form-control" id="descripcion">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Publicar</button>
