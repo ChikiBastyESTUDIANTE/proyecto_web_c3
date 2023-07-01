@@ -39,9 +39,15 @@
                         </div>
                         <div class="card-body">
                             <form action="" method="POST">
+                            @method('put')
+                            @csrf
                                 <div class="mb-3">
                                     <label for="foto" name="archivo" class="form-label">Elegir foto</label>
                                     <input type="file" class="form-control" id="foto" aria-describedby="emailHelp"> 
+                                </div>
+                                <div class="mb-3">
+                                    <label for="titulo" name="titulo" class="form-label">Titulo</label>
+                                    <input type="text" class="form-control" id="titulo">
                                 </div>
                                 <div class="mb-3">
                                     <label for="descripcion" name="descripcion" class="form-label">Descripcion</label>
