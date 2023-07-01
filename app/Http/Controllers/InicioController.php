@@ -29,7 +29,7 @@ class InicioController extends Controller
             if($cuentaLogeada->perfil_id == 1){ //Si es admin
                 return redirect()->route('admin.imagenes');
             }elseif($cuentaLogeada->perfil_id == 2){
-                return redirect()->route('login'); //placeholder 
+                return redirect()->route('artista.vista_artista'); //placeholder 
             }
         }
 
