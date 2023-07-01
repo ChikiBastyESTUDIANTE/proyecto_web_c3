@@ -13,26 +13,28 @@
                 <div class="row">
                     <div class="col-12 col-lg-6 offset-lg-3">
                         <div class="card">
-                            <div class="card-header"><h4>Inicio de sesión</h4></div>
+                            <div class="card-header"><h4>Modificar cuenta</h4></div>
                             <div class="card-body">
-                                <form action="{{route('login.inicio')}}" method="POST">
+                                <form action="{{route('admin.modificarConfirmado', $cuenta->user)}}" method="POST">
+                                @method('PUT')
                                 @csrf
                                     <div class="mb-2">
                                         <label class="form-label" for="">Nombre de usuario</label>
-                                        <input class="form-control" type="text" name="user">
+                                        <input class="form-control" type="text" name="nombreUsuarioM" value="{{$cuenta->user}}">
                                     </div>
                                     <div class="mb-2">
-                                        <label class="form-label" for="">Contraseña</label>
-                                        <input class="form-control" type="password" name="contrasena">
+                                        <label class="form-label" for="">Nombre</label>
+                                        <input class="form-control" type="text" name="nombreM" value="{{$cuenta->nombre}}">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label" for="">Apellido</label>
+                                        <input class="form-control" type="text" name="apellidoM" value="{{$cuenta->apellido}}">
                                     </div>
                                     <div>
                                         <div class="row">
-                                        <div class="col-2"><button class="btn btn-primary" type="submit">Iniciar</button></div>
-                                        <div class="col-2 offset-8"><a href="{{route('index')}}" class="btn btn-danger">Cancelar</a></div>
+                                        <div class="col-10"><button class="btn btn-warning" type="submit">Modificar cuenta</button></div>
+                                        <div class="col-2"><a href="{{route('admin.listarPerfiles')}}" class="btn btn-danger text-end">Cancelar</a></div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <div class="col-8 pt-2"><a href="{{route('login.datosCuenta')}}" class="mt-2 text-end">Crear cuenta</a></div>
                                     </div>
                                 </form>
                             </div>

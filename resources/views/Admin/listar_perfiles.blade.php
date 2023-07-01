@@ -30,31 +30,35 @@
                     <h4>Cuentas</h4>
                 </div>
                 <div class="card-body">
-                        <table class="table table-bordered">
-                                <thead class="bg-secondary">
-                                    <tr>
-                                        <th><h5 class="mt-2">User</h5></th>
-                                        <th><h5 class="mt-2">Nombre</h5></th>
-                                        <th><h5 class="mt-2">Apellido</h5></th>
-                                        <th><h5 class="mt-2">Perfil_id</h5></th>
-                                        <th><h5 class="mt-2">Opciones</h5></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($cuentas as $cuenta)
-                                    <tr>
-                                        <td>{{$cuenta->user}}</td>
-                                        <td>{{$cuenta->nombre}}</td>
-                                        <td>{{$cuenta->apellido}}</td>
-                                        <td>{{$cuenta->perfil_id}}</td>
-                                        <td>
-                                            <a href="" class="btn btn-danger">Eliminar</a>
-                                            <a href="" class="btn btn-warning">Modificar</a>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                <table class="table table-bordered">
+                        <thead class="bg-secondary">
+                            <tr>
+                                <th><h5 class="mt-2">User</h5></th>
+                                <th><h5 class="mt-2">Nombre</h5></th>
+                                <th><h5 class="mt-2">Apellido</h5></th>
+                                <th><h5 class="mt-2">Perfil_id</h5></th>
+                                <th><h5 class="mt-2">Opciones</h5></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($cuentas as $cuenta)
+                            <tr>
+                                <td>{{$cuenta->user}}</td>
+                                <td>{{$cuenta->nombre}}</td>
+                                <td>{{$cuenta->apellido}}</td>
+                                <td>{{$cuenta->perfil_id}}</td>
+                                <td>
+                                    <form action="{{route('admin.eliminar',$cuenta->user)}}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                                        <a href="{{route('admin.modificar',$cuenta->user)}}" class="btn btn-warning">Modificar</a>
+                                    </form>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

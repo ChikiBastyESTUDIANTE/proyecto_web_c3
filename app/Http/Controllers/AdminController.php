@@ -19,4 +19,25 @@ class AdminController extends Controller
         $imagenes = Imagen::all();
         return view('admin.banear_desbanear',compact('imagenes'));
     }
+
+    public function eliminar(Cuenta $cuenta){
+        $imagenesEliminadas = Imagen::where('cuenta_user',$cuenta->user)->get();
+        foreach($imagenesEliminadas as $imagenEliminada){
+            $imagenEliminada->delete();
+        }
+        $cuenta->delete();
+        return redirect()->route('admin.listarPerfiles');
+    }
+
+    public function modificar(Cuenta $cuenta){
+        return view('admin.modificar_cuenta',compact('cuenta'));
+    }
+
+    public function modificarConfirmado(Cuenta $cuenta,Request $request){
+        $cuenta->user = $request->nombreUsuarioM;
+        $cuenta->nombre = $request->nombreM;
+        $cuenta->apellido = $request->apellidoM;
+        $cuenta->save();
+        return redirect()->route('admin.listarPerfiles');
+    }
 }

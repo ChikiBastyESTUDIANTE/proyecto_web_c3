@@ -27,3 +27,6 @@ Route::get('/perfil',[ArtistaController::class, 'perfil'])->name('artista.perfil
 
 Route::get('/admin/listar',[AdminController::class,'listarPerfiles'])->name('admin.listarPerfiles');
 Route::get('/admin/imagenes',[AdminController::class,'imagenes'])->name('admin.imagenes');
+Route::get('/admin/modificar/{cuenta}',[AdminController::class,'modificar'])->name('admin.modificar');
+Route::put('/admin/modificar/{cuenta}',[AdminController::class,'modificarConfirmado'])->name('admin.modificarConfirmado');
+Route::delete('/admin/eliminar/{cuenta}',[AdminController::class,'eliminar'])->name('admin.eliminar');

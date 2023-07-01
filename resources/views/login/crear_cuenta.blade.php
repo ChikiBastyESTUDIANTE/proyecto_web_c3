@@ -36,7 +36,7 @@
                                     <div>
                                         <div class="row">
                                         <div class="col-10"><button class="btn btn-primary" type="submit">Crear cuenta</button></div>
-                                        <div class="col-2 pt-2"><a href="{{route('login')}}" class="mt-2 text-end">Cancelar</a></div>
+                                        <div class="col-2"><a href="{{route('login')}}" class="btn btn-danger text-end">Cancelar</a></div>
                                         </div>
                                     </div>
                                 </form>
