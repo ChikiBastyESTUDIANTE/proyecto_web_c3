@@ -24,6 +24,7 @@ Route::post('/crear-cuenta',[InicioController::class,'crearCuenta'])->name('logi
 Route::post('/logear',[InicioController::class,'inicio'])->name('login.inicio');
 
 Route::get('/perfil',[ArtistaController::class, 'perfil'])->name('artista.perfil');
+Route::get('/galeria',[ArtistaController::class, 'galeria'])->name('artista.vista_artista');
 
 Route::get('/admin/listar',[AdminController::class,'listarPerfiles'])->name('admin.listarPerfiles');
 Route::get('/admin/imagenes',[AdminController::class,'imagenes'])->name('admin.imagenes');
