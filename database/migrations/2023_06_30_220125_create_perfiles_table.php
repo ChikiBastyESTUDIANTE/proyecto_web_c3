@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('perfiles', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            $table->string(20);
+            $table->string('nombre',20);
             $table->timestamps();
         });
     }

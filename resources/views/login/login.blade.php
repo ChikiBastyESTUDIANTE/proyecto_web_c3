@@ -25,7 +25,7 @@
                             <div>
                                 <div class="row">
                                 <div class="col-9"><button class="btn btn-outline-dark" type="submit">Iniciar</button></div>
-                                <div class="col-3 pt-2 ps-5"><a href="{{route('login.crearCuenta')}}" class="mt-2 text-end">Crear cuenta</a></div>
+                                <div class="col-3 pt-2 ps-5"><a href="{{route('login.datosCuenta')}}" class="mt-2 text-end">Crear cuenta</a></div>
                                 </div>
                             </div>
                         </form>

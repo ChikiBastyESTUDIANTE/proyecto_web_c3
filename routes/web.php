@@ -14,4 +14,5 @@ use App\Http\Controllers\InicioController;
 */
 
 Route::get('/',[InicioController::class,'login'])->name('login');
-Route::get('/crear-cuenta',[InicioController::class,'crearCuenta'])->name('login.crearCuenta');
+Route::get('/datos-cuenta',[InicioController::class,'datosCuenta'])->name('login.datosCuenta');
+Route::post('/crear-cuenta',[InicioController::class,'crearCuenta'])->name('login.crearCuenta');
