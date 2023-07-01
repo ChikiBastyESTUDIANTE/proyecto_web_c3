@@ -13,14 +13,15 @@
                 <div class="card">
                     <div class="card-header"><h4>Inicio de sesión</h4></div>
                     <div class="card-body">
-                        <form action="">
+                        <form action="{{route('login.inicio')}}" method="POST">
+                        @csrf
                             <div class="mb-2">
                                 <label class="form-label" for="">Nombre de usuario</label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" name="user">
                             </div>
                             <div class="mb-2">
                                 <label class="form-label" for="">Contraseña</label>
-                                <input class="form-control" type="password">
+                                <input class="form-control" type="password" name="contrasena">
                             </div>
                             <div>
                                 <div class="row">

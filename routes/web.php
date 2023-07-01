@@ -17,6 +17,7 @@ use App\Http\Controllers\AdminController;
 Route::get('/login',[InicioController::class,'login'])->name('login');
 Route::get('/datos-cuenta',[InicioController::class,'datosCuenta'])->name('login.datosCuenta');
 Route::post('/crear-cuenta',[InicioController::class,'crearCuenta'])->name('login.crearCuenta');
+Route::post('/logear',[InicioController::class,'inicio'])->name('login.inicio');
 
 Route::get('/perfil',[ArtistaController::class, 'perfil'])->name('artista.perfil');
 
