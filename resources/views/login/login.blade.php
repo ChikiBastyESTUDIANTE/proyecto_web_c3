@@ -9,28 +9,31 @@
 <body>
     <div class="container min-vh-100">
         <div class="row">
-            <div class="col-12 col-lg-6 offset-lg-3">
-                <div class="card">
-                    <div class="card-header"><h4>Inicio de sesión</h4></div>
-                    <div class="card-body">
-                        <form action="{{route('login.inicio')}}" method="POST">
-                        @csrf
-                            <div class="mb-2">
-                                <label class="form-label" for="">Nombre de usuario</label>
-                                <input class="form-control" type="text" name="user">
+            <div class="col min-vh-100 d-flex flex-column justify-content-center">
+                <div class="row">
+                    <div class="col-12 col-lg-6 offset-lg-3">
+                        <div class="card">
+                            <div class="card-header"><h4>Inicio de sesión</h4></div>
+                            <div class="card-body">
+                                <form action="{{route('login.inicio')}}" method="POST">
+                                @csrf
+                                    <div class="mb-2">
+                                        <label class="form-label" for="">Nombre de usuario</label>
+                                        <input class="form-control" type="text" name="user">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label" for="">Contraseña</label>
+                                        <input class="form-control" type="password" name="contrasena">
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                        <div class="col-9"><button class="btn btn-primary" type="submit">Iniciar</button></div>
+                                        <div class="col-3 pt-2 ps-5"><a href="{{route('login.datosCuenta')}}" class="mt-2 text-end">Crear cuenta</a></div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="mb-2">
-                                <label class="form-label" for="">Contraseña</label>
-                                <input class="form-control" type="password" name="contrasena">
-                            </div>
-                            <div>
-                                <div class="row">
-                                <div class="col-9"><button class="btn btn-outline-dark" type="submit">Iniciar</button></div>
-                                <div class="col-3 pt-2 ps-5"><a href="{{route('login.datosCuenta')}}" class="mt-2 text-end">Crear cuenta</a></div>
-                                </div>
-                            </div>
-                        </form>
-
+                        </div>
                     </div>
                 </div>
             </div>

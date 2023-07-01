@@ -1,6 +1,6 @@
 @extends('publico.template')
 @section('botones-nav')
-    <a href="{{route('logout')}}" class="btn btn-outline-dark">Logout</a>
+    <a href="{{route('logout')}}" class="btn btn-light">Logout</a>
 @endsection
 {{-- PROFE SI SE QUE FALTAN COLORES AQUI :C --}}
 @section('contenido-principal')
@@ -9,6 +9,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4>Tipos de perfiles</h4>
+                    {{-- {{auth()->user()->nombre}}  TODO LO QUE ME INGENIE EN EL TRABAJO PASADO FUE EN VANOOOOOOOOOOOO--}}
                 </div>
                 <div class="card-body">
                     @foreach($perfiles as $perfil)

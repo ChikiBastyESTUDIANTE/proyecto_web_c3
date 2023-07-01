@@ -40,7 +40,7 @@ class InicioController extends Controller
 
     public function logOut(){
         Auth::logout();
-        return redirect()->route('login');
+        return redirect()->route('index');
     }
 
 
