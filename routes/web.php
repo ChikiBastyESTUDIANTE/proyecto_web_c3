@@ -15,7 +15,7 @@ use App\Http\Controllers\ArtistaController;
 |
 */
 
-Route::get('/',[InicioController::class,'index']);
+Route::get('/',[InicioController::class,'index'])->name('index');
 Route::get('/logout',[InicioController::class,'logout'])->name('logout');
 
 Route::get('/login',[InicioController::class,'login'])->name('login');
@@ -26,3 +26,4 @@ Route::post('/logear',[InicioController::class,'inicio'])->name('login.inicio');
 Route::get('/perfil',[ArtistaController::class, 'perfil'])->name('artista.perfil');
 
 Route::get('/admin/listar',[AdminController::class,'listarPerfiles'])->name('admin.listarPerfiles');
+Route::get('/admin/imagenes',[AdminController::class,'imagenes'])->name('admin.imagenes');

@@ -27,7 +27,8 @@
                                     </div>
                                     <div>
                                         <div class="row">
-                                        <div class="col-9"><button class="btn btn-primary" type="submit">Iniciar</button></div>
+                                        <div class="col-2"><button class="btn btn-primary" type="submit">Iniciar</button></div>
+                                        <div class="col-7"><a href="{{route('index')}}" class="btn btn-danger">Cancelar</a></div>
                                         <div class="col-3 pt-2 ps-5"><a href="{{route('login.datosCuenta')}}" class="mt-2 text-end">Crear cuenta</a></div>
                                         </div>
                                     </div>

@@ -14,4 +14,9 @@ class AdminController extends Controller
         $perfiles = Perfil::all();
         return view('admin.listar_perfiles',compact(['perfiles','cuentas']));
     }
+
+    public function imagenes(){
+        $imagenes = Imagen::all();
+        return view('admin.banear_desbanear',compact('imagenes'));
+    }
 }
