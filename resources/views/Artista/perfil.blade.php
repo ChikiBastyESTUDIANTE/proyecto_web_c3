@@ -6,13 +6,12 @@
             <div class="col d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                        <body>
                             <div class="profile">
                                 <div class="profile-header">
                                     <img src="imagenes/fotoperfil.jpg" alt="Profile Picture" class="profile-picture">
                                 <div class="profile-info">
-                                    <div class="profile-username">Nombre de Usuario</div>
-                                    <div class="profile-bio">Biografía del usuario</div>
+                                    <div class="profile-username">Epsilon</div>
+                                    <div class="profile-bio">Biografia</div>
                                 </div>
                                 </div>
                                 
@@ -25,7 +24,6 @@
                                 </div>
                                 </div>
                             </div>
-                        </body>
                     </div>
                 </div>
             </div>
