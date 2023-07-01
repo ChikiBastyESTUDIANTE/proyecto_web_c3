@@ -1,5 +1,14 @@
 @extends('Publico.template')
 
+@section('botones-nav')
+    <div class="row">
+        <div class="col">
+            <a href="{{route('artista.vista_artista')}}" class="navbar-brand">Galeria</a>
+            <a href="{{route('logout')}}" class="btn btn-light">Logout</a>
+        </div>
+    </div>
+@endsection
+
 @section('contenido-principal')
         <div class="container min-vh-100">
             <div class="row">
