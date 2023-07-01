@@ -1,7 +1,7 @@
 @extends('publico.template')
 
 @section('botones-nav')
-    <a href="{{route('login')}}" class="btn btn-outline-dark">Iniciar sesion</a>
+    <a href="{{route('login')}}" class="btn btn-light">Iniciar sesion</a>
 @endsection
 
 @section('contenido-principal')
