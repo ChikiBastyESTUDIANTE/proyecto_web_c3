@@ -1,0 +1,1 @@
+@extends('Publico.template')
