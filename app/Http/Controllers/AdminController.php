@@ -9,6 +9,10 @@ use App\Models\Cuenta;
 
 class AdminController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+    
     public function listarPerfiles(){
         $cuentas = Cuenta::all();
         $perfiles = Perfil::all();
