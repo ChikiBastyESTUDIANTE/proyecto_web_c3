@@ -5,5 +5,5 @@
 @endsection
 
 @section('contenido-principal')
-    
+    Pagina principal
 @endsection
