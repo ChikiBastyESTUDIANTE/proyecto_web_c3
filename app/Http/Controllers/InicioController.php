@@ -29,7 +29,7 @@ class InicioController extends Controller
         if(Auth::attempt(['user'=>$user,'password'=>$contrasena])){
             $cuentaLogeada = Cuenta::where('user',$user)->first();
             if($cuentaLogeada->perfil_id == 1){ //Si es admin
-                return redirect()->route('admin.imagenes');
+                return redirect()->route('admin.listarPerfiles');
             }elseif($cuentaLogeada->perfil_id == 2){
                 return redirect()->route('artista.vista_artista'); //placeholder 
             }
