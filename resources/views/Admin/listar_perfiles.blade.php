@@ -1,5 +1,11 @@
 @extends('publico.template')
 @section('botones-nav')
+    <div class="row">
+        <div class="col">
+            <a href="{{route('admin.listarPerfiles')}}" class="navbar-brand navbar-dark">Listado</a>
+            <a href="{{route('admin.imagenes')}}" class="navbar-brand">Imagenes</a>
+        </div>
+    </div>
     <a href="{{route('logout')}}" class="btn btn-light">Logout</a>
 @endsection
 {{-- PROFE SI SE QUE FALTAN COLORES AQUI :C --}}
@@ -31,7 +37,7 @@
                                         <th><h5 class="mt-2">Nombre</h5></th>
                                         <th><h5 class="mt-2">Apellido</h5></th>
                                         <th><h5 class="mt-2">Perfil_id</h5></th>
-                                        <th><h5 class="mt-2">Modificar</h5></th>
+                                        <th><h5 class="mt-2">Opciones</h5></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -41,7 +47,9 @@
                                         <td>{{$cuenta->nombre}}</td>
                                         <td>{{$cuenta->apellido}}</td>
                                         <td>{{$cuenta->perfil_id}}</td>
-                                        <td> (botones)
+                                        <td>
+                                            <a href="" class="btn btn-danger">Eliminar</a>
+                                            <a href="" class="btn btn-warning">Modificar</a>
                                         </td>
                                     </tr>
                                     @endforeach

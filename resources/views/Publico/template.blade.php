@@ -8,7 +8,7 @@
     @yield('links')
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-secondary">
+    <nav class="navbar navbar-expand-lg bg-success">
         <div class="container-fluid">
             <h4>Instagramn't</h4>
             @yield('botones-nav')
