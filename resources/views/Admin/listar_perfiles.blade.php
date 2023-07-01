@@ -19,7 +19,7 @@
                 </div>
                 <div class="card-body">
                     @foreach($perfiles as $perfil)
-                        <li>{{$perfil->nombre}}</li>
+                        <li>{{$perfil->id}}) {{$perfil->nombre}}</li>
                     @endforeach
                 </div>
             </div>
@@ -51,7 +51,9 @@
                                     <form action="{{route('admin.eliminar',$cuenta->user)}}" method="POST">
                                     @method('DELETE')
                                     @csrf
-                                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                                        @if(!($cuenta->perfil_id == 1))
+                                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                                        @endif
                                         <a href="{{route('admin.modificar',$cuenta->user)}}" class="btn btn-warning">Modificar</a>
                                     </form>
                                 </td>
