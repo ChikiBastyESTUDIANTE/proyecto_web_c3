@@ -1,23 +1,21 @@
 @extends('Publico.template')
 
 @section('contenido-principal')
-    <div class="container">
-        <div class="row">
-            <div class="col d-flex justify-content-center">
+        <div class="container min-vh-100">
+            <div class="col-4 d-flex flex-column align-items-center pt-5">
                 <div class="card" style="width: 18rem;">
-                    <img src="imagenes/fotoperfil.jpg" class="card-img-top" alt="100px">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-header">
+                        <h5>Fotos</h5>
                     </div>
                     <div class="card-body">
-                        <form action="..." method="POST">
-                            <div><input type="file" name="archivo" id="archivo" class="form-control"></div>
-                            <div class="mt-3"><button type="submit" class="btn btn-secondary-rojo">Subir propuesta</button></div>
-                        </form>
+                        <div class="card">
+                            <div class="card-body">
+                                HOLA
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 @endsection
+
