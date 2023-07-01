@@ -13,22 +13,23 @@
                 <div class="card">
                     <div class="card-header"><h4>Crear cuenta</h4></div>
                     <div class="card-body">
-                        <form action="">
+                        <form action="" method="post">
+                        @csrf
                             <div class="mb-2">
                                 <label class="form-label" for="">Nombre de usuario</label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" id="nombreUsuario">
                             </div>
                             <div class="mb-2">
                                 <label class="form-label" for="">Nombre</label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" id="nombre">
                             </div>
                             <div class="mb-2">
                                 <label class="form-label" for="">Apellido</label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" id="apellido">
                             </div>
                             <div class="mb-2">
                                 <label class="form-label" for="">Contraseña</label>
-                                <input class="form-control" type="password">
+                                <input class="form-control" type="password" id="contrasena">
                             </div>
                             <div>
                                 <div class="row">
