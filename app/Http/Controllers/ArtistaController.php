@@ -21,16 +21,18 @@ class ArtistaController extends Controller
     }
 
     public function subirArchivo(Request $request){
-        $request->file('archivo')->storeAs('',$request->file('archivo')->getClientOriginalName()); 
-        $imagenes = new Imagen();
-        $imagenes->documento = $request->file('archivo')->getClientOriginalName();
-        $imagenes->id =
-        $imagenes->titulo =
-        $imagenes->archivo =
-        $imagenes->baneada =
-        $imagenes->motivo_ban =
-        $imagenes->cuenta_user =
-        $imagenes->save();
-        return redirect()->route('artista.perfil');
+        if(auth()->user()->perfil_id == 2){      
+            $request->file('archivo')->storeAs('',$request->file('archivo')->getClientOriginalName()); 
+            $imagenes = new Imagen();
+            $imagenes->archivo = $request->file('archivo')->getClientOriginalName();
+            $imagenes->titulo =
+            $imagenes->baneada =
+            $imagenes->motivo_ban =
+            $imagenes->cuenta_user =
+            $imagenes->save();
+            return redirect()->route('artista.perfil');
+        }else{
+            return redirect()->route('logout');
+        }
     }
 }
