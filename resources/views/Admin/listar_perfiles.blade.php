@@ -11,9 +11,9 @@
                     <h4>Tipos de perfiles</h4>
                 </div>
                 <div class="card-body">
-                    {{-- @foreach($prefiles as $perfil)
-                        <li>asdhjashdjk</li>
-                    @endforeach --}}
+                    @foreach($perfiles as $perfil)
+                        <li>{{$perfil->nombre}}</li>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -23,9 +23,29 @@
                     <h4>Cuentas</h4>
                 </div>
                 <div class="card-body">
-                    {{-- @foreach($prefiles as $perfil)
-                        <li>asdhjashdjk</li>
-                    @endforeach --}}
+                        <table class="table table-bordered">
+                                <thead class="bg-secondary">
+                                    <tr>
+                                        <th><h5 class="mt-2">User</h5></th>
+                                        <th><h5 class="mt-2">Nombre</h5></th>
+                                        <th><h5 class="mt-2">Apellido</h5></th>
+                                        <th><h5 class="mt-2">Perfil_id</h5></th>
+                                        <th><h5 class="mt-2">Modificar</h5></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($cuentas as $cuenta)
+                                    <tr>
+                                        <td>{{$cuenta->user}}</td>
+                                        <td>{{$cuenta->nombre}}</td>
+                                        <td>{{$cuenta->apellido}}</td>
+                                        <td>{{$cuenta->perfil_id}}</td>
+                                        <td> (botones)
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                 </div>
             </div>
         </div>

@@ -11,8 +11,12 @@ use Illuminate\Support\Facades\Auth;
 
 class InicioController extends Controller
 {
+    public function index(){
+        return view('publico.index');
+    }
+
     public function login(){
-        return view('login.login');
+        return view('login.login'); 
     }
 
     public function inicio(Request $request)
@@ -23,9 +27,7 @@ class InicioController extends Controller
         if(Auth::attempt(['user'=>$user,'password'=>$contrasena])){
             $cuentaLogeada = Cuenta::where('user',$user)->first();
             if($cuentaLogeada->perfil_id = 1){ //Si es admin
-                $cuentas = Cuenta::all();
-                $perfiles = Perfil::all();
-                return view('Admin.listar_perfiles', compact(['cuentaLogeada','cuentas','perfiles']));
+                return redirect()->route('admin.listarPerfiles');
             }
         }
 
@@ -33,6 +35,12 @@ class InicioController extends Controller
             'user' => 'Error!',
         ])->onlyInput('user');
     }
+
+    public function logOut(){
+        Auth::logout();
+        return redirect()->route('login');
+    }
+
 
     public function datosCuenta(){
         return view('login.crear_cuenta');

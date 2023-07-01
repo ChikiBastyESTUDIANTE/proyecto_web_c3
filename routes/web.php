@@ -15,6 +15,8 @@ use App\Http\Controllers\ArtistaController;
 |
 */
 
+Route::get('/',[InicioController::class,'index']);
+
 Route::get('/login',[InicioController::class,'login'])->name('login');
 Route::get('/datos-cuenta',[InicioController::class,'datosCuenta'])->name('login.datosCuenta');
 Route::post('/crear-cuenta',[InicioController::class,'crearCuenta'])->name('login.crearCuenta');
