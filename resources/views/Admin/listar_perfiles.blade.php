@@ -1,6 +1,6 @@
 @extends('publico.template')
 @section('botones-nav')
-    
+    <a href="{{route('logout')}}" class="btn btn-outline-dark">Logout</a>
 @endsection
 {{-- PROFE SI SE QUE FALTAN COLORES AQUI :C --}}
 @section('contenido-principal')
