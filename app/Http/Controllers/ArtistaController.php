@@ -12,12 +12,20 @@ class ArtistaController extends Controller
     }
     
     public function perfil(){
-        return view('artista.perfil');
+        if(auth()->user()->perfil_id == 2){
+            return view('artista.perfil');
+        }else{
+            return redirect()->route('logout');
+        }
     }
 
     public function galeria(){
-        $imagenes = Imagen::all();
-        return view('artista.vista_artista',compact('imagenes'));
+        if(auth()->user()->perfil_id == 2){
+            $imagenes = Imagen::all();
+            return view('artista.vista_artista',compact('imagenes'));
+        }else{
+            return redirect()->route('logout');
+        }
     }
 
     public function subirArchivo(Request $request){
