@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cuenta;
-use App\Models\Imangen;
+use App\Models\Imagen;
 use App\Models\Perfil;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Auth;
 class InicioController extends Controller
 {
     public function index(){
-        return view('publico.index');
+        $cuentas = Cuenta::all();
+        $imagenes = Imagen::all();
+        return view('publico.index', compact(['imagenes', 'cuentas']));
     }
 
     public function login(){
@@ -27,7 +29,7 @@ class InicioController extends Controller
         if(Auth::attempt(['user'=>$user,'password'=>$contrasena])){
             $cuentaLogeada = Cuenta::where('user',$user)->first();
             if($cuentaLogeada->perfil_id == 1){ //Si es admin
-                return redirect()->route('admin.imagenes');
+                return redirect()->route('admin.listarPerfiles');
             }elseif($cuentaLogeada->perfil_id == 2){
                 return redirect()->route('artista.vista_artista'); //placeholder 
             }
