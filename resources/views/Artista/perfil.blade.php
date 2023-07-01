@@ -5,25 +5,10 @@
         <div class="row">
             <div class="col d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
+                    <img src="imagenes/fotoperfil.jpg" class="card-img-top" alt="100px">
                     <div class="card-body">
-                            <div class="profile">
-                                <div class="profile-header">
-                                    <img src="imagenes/fotoperfil.jpg" alt="Profile Picture" class="profile-picture">
-                                <div class="profile-info">
-                                    <div class="profile-username">Epsilon</div>
-                                    <div class="profile-bio">Biografia</div>
-                                </div>
-                                </div>
-                                
-                                <div class="profile-posts">
-                                <div class="post">
-                                    <img src="imagenes/fotoperfil.jpg" alt="Post 1" class="post-image">
-                                </div>
-                                <div class="post">
-                                    <img src="post2.jpg" alt="Post 2" class="post-image">
-                                </div>
-                                </div>
-                            </div>
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
