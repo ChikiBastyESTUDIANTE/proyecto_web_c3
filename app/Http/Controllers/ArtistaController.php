@@ -33,9 +33,9 @@ class ArtistaController extends Controller
             $request->file('archivo')->storeAs('',$request->file('archivo')->getClientOriginalName()); 
             $imagenes = new Imagen();
             $imagenes->archivo = $request->file('archivo')->getClientOriginalName();
-            $imagenes->titulo = $request->titulo('titulo')->getClientOriginalName();
-            $imagenes->baneada = false
-            $imagenes->motivo_ban = NULL
+        /*  $imagenes->titulo = ""
+            $imagenes->baneada = ""
+            $imagenes->motivo_ban = "" */
             $imagenes->cuenta_user = auth()->user()->user;
             $imagenes->save();
             return redirect()->route('artista.perfil');
